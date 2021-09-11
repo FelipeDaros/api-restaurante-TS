@@ -1,13 +1,14 @@
 import { inject, injectable } from "tsyringe";
 import AppError from "../../../shared/infra/errors/AppError";
-import { IPlate } from "../domain/models/IPlate";
+import { IAdministradorRepository } from "../../adminstrador/domain/repositories/IAdministradorRepository";
+import { IPlate } from "../domain/DTOs/IPlateDTO";
 import { IPlatesRepository } from "../domain/repositories/IProductsRepository";
 
 @injectable()
 class CreatePlateService {
   constructor(
     @inject('PlatesRepository')
-    private platesRepository: IPlatesRepository
+    private platesRepository: IPlatesRepository,
   ) { }
 
   async execute({ name_plate, price }: IPlate): Promise<IPlate> {

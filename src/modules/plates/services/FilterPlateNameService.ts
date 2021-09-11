@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 import AppError from "../../../shared/infra/errors/AppError";
-import { IPlate } from "../domain/models/IPlate";
+import { IPlate } from "../domain/DTOs/IPlateDTO";
 import { IPlatesRepository } from "../domain/repositories/IProductsRepository";
 
 

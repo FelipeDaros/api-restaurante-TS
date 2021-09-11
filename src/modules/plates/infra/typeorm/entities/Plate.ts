@@ -1,5 +1,5 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
-import { IPlate } from "../../../domain/models/IPlate";
+import { IPlate } from "../../../domain/DTOs/IPlateDTO";
 import { v4 as uuidV4 } from 'uuid';
 
 @Entity("plates")

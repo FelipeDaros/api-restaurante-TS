@@ -1,4 +1,4 @@
-import { IPlate } from "../models/IPlate";
+import { IPlate } from "../DTOs/IPlateDTO";
 
 interface IPlatesRepository {
   findByName(name_plate: string): Promise<IPlate | undefined | IPlate[]>;

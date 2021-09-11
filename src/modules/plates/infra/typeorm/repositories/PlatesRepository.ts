@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import { IPlate } from "../../../domain/models/IPlate";
+import { IPlate } from "../../../domain/DTOs/IPlateDTO";
 import { IPlatesRepository } from "../../../domain/repositories/IProductsRepository";
 import { Plate } from "../entities/Plate";
 
