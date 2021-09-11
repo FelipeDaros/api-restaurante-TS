@@ -1,10 +1,10 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class CreatePlate1630915843462 implements MigrationInterface {
+export class CreateAdministrador1631385311208 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
-            name: "plates",
+            name: "administrador",
             columns: [
                 {
                     name: "id",
@@ -12,17 +12,12 @@ export class CreatePlate1630915843462 implements MigrationInterface {
                     isPrimary: true
                 },
                 {
-                    name: "name_plate",
+                    name: "name",
+                    type: "uuid",
+                },
+                {
+                    name: "password",
                     type: "varchar"
-                },
-                {
-                    name: "price",
-                    type: "integer"
-                },
-                {
-                    name: "photo_plate",
-                    type: "varchar",
-                    isNullable: true
                 },
                 {
                     name: "created_at",
@@ -35,11 +30,11 @@ export class CreatePlate1630915843462 implements MigrationInterface {
                     default: "now()"
                 }
             ]
-        }))
+        }));
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("plates")
+        await queryRunner.dropTable("administrador");
     }
 
 }
