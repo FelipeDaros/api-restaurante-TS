@@ -7,11 +7,12 @@ import { routes } from "./shared/infra/routes";
 import './shared/container/index';
 import './shared/infra/typeorm/index';
 import AppError from "./shared/infra/errors/AppError";
+import upload from "./config/upload";
 
 const app = express();
 
 app.use(express.json());
-
+app.use('/files', express.static(upload.directory));
 app.use(routes);
 
 app.use(
