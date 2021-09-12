@@ -3,8 +3,8 @@ import upload from "../../../config/upload";
 import path from 'path';
 import fs from "fs";
 import AppError from "../../../shared/infra/errors/AppError";
-import { IPlate } from "../domain/DTOs/IPlateDTO";
-import { IPlatesRepository } from "../domain/repositories/IProductsRepository";
+import { IPlate } from "../interfaces/DTOs/IPlateDTO";
+import { IPlatesRepository } from "../interfaces/repositories/IProductsRepository";
 
 @injectable()
 class CreatePhotoService {

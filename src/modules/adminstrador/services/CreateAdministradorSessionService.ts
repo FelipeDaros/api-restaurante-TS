@@ -3,8 +3,8 @@ import { sign } from 'jsonwebtoken';
 import { inject, injectable } from "tsyringe";
 import auth from "../../../config/auth";
 import AppError from "../../../shared/infra/errors/AppError";
-import { IAdministrador } from "../domain/DTOs/IAdministradorDTO";
-import { IAdministradorRepository } from "../domain/repositories/IAdministradorRepository";
+import { IAdministrador } from "../interfaces/DTOs/IAdministradorDTO";
+import { IAdministradorRepository } from "../interfaces/repositories/IAdministradorRepository";
 
 
 interface IResponse { administrador: IAdministrador; token: string; }

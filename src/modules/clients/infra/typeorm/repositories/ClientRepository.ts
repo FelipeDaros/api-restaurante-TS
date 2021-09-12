@@ -10,6 +10,12 @@ class ClientRepository implements IClientRepository {
   constructor() {
     this.ormRepository = getRepository(Client);
   }
+   
+  findAll(): Promise<IClient[]> {
+    const clients = this.ormRepository.find();
+
+    return clients;
+  }
 
   async create({ name, email, password }: IClient): Promise<IClient> {
     const client = this.ormRepository.create({ name, password, email });
@@ -39,6 +45,10 @@ class ClientRepository implements IClientRepository {
     const client = await this.ormRepository.findOne({email})
 
     return client;
+  }
+
+  async deleteClient(id: string): Promise<void> {
+    await this.ormRepository.delete(id);
   }
   
 }

@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
-import { IAdministrador } from '../../../domain/DTOs/IAdministradorDTO';
+import { IAdministrador } from '../../../interfaces/DTOs/IAdministradorDTO';
 
 @Entity("administrador")
 class Administrador implements IAdministrador {

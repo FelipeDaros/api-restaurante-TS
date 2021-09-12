@@ -3,6 +3,7 @@ import { inject, injectable } from "tsyringe";
 import AppError from "../../../shared/infra/errors/AppError";
 import { ClientRepository } from "../infra/typeorm/repositories/ClientRepository";
 import { IClient } from "../interfaces/DTOs/IClient";
+import { ICreateClient } from "../interfaces/DTOs/ICreateClient";
 
 @injectable()
 class CreateClientService {
@@ -11,7 +12,7 @@ class CreateClientService {
     private clientRepository: ClientRepository
   ) { }
 
-  async execute({ name, password, email }: IClient): Promise<IClient> {
+  async execute({ name, password, email }: ICreateClient): Promise<IClient> {
     const clientExist = await this.clientRepository.findByEmail(email);
 
     if (clientExist) {

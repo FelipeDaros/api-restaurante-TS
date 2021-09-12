@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
-import { IAdministrador } from "../../../domain/DTOs/IAdministradorDTO";
-import { IAdministradorRepository } from "../../../domain/repositories/IAdministradorRepository";
+import { IAdministrador } from "../../../interfaces/DTOs/IAdministradorDTO";
+import { IAdministradorRepository } from "../../../interfaces/repositories/IAdministradorRepository";
 import { Administrador } from "../entities/Administrador";
 
 

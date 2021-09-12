@@ -2,7 +2,7 @@ import path from 'path';
 import multer from 'multer';
 import crypto from 'crypto';
 
-const uploadFolder = path.resolve(__dirname, '..', '..', 'uploads', 'plates_photos');
+const uploadFolder = path.resolve(__dirname, '..', '..', 'uploads', 'clients_photos');
 
 export default {
   directory: uploadFolder,

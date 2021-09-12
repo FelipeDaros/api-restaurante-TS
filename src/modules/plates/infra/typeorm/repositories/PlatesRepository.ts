@@ -1,6 +1,6 @@
 import { getRepository, Repository } from "typeorm";
-import { IPlate } from "../../../domain/DTOs/IPlateDTO";
-import { IPlatesRepository } from "../../../domain/repositories/IProductsRepository";
+import { IPlate } from "../../../interfaces/DTOs/IPlateDTO";
+import { IPlatesRepository } from "../../../interfaces/repositories/IProductsRepository";
 import { Plate } from "../entities/Plate";
 
 class PlatesRepository implements IPlatesRepository {
@@ -41,6 +41,16 @@ class PlatesRepository implements IPlatesRepository {
     await this.ormRepository.save(plate);
 
     return plate;
+  }
+
+  findAllPlates(): Promise<IPlate[]> {
+    const plates = this.ormRepository.find();
+
+    return plates;
+  }
+
+  async deletePlate(id: string): Promise<void> {
+    await this.ormRepository.delete(id);
   }
   
 }

@@ -1,8 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import AppError from "../../../shared/infra/errors/AppError";
 import { hashSync } from 'bcrypt';
-import { IAdministrador } from "../domain/DTOs/IAdministradorDTO";
-import { IAdministradorRepository } from "../domain/repositories/IAdministradorRepository";
+import { IAdministrador } from "../interfaces/DTOs/IAdministradorDTO";
+import { IAdministradorRepository } from "../interfaces/repositories/IAdministradorRepository";
 
 
 @injectable()

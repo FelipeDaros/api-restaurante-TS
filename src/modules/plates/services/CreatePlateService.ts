@@ -1,8 +1,8 @@
 import { inject, injectable } from "tsyringe";
 import AppError from "../../../shared/infra/errors/AppError";
-import { IAdministradorRepository } from "../../adminstrador/domain/repositories/IAdministradorRepository";
-import { IPlate } from "../domain/DTOs/IPlateDTO";
-import { IPlatesRepository } from "../domain/repositories/IProductsRepository";
+import { IAdministradorRepository } from "../../adminstrador/interfaces/repositories/IAdministradorRepository";
+import { IPlate } from "../interfaces/DTOs/IPlateDTO";
+import { IPlatesRepository } from "../interfaces/repositories/IProductsRepository";
 
 @injectable()
 class CreatePlateService {

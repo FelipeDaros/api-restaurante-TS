@@ -1,6 +1,7 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
-import { IPlate } from "../../../domain/DTOs/IPlateDTO";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryColumn } from "typeorm";
+import { IPlate } from "../../../interfaces/DTOs/IPlateDTO";
 import { v4 as uuidV4 } from 'uuid';
+import { Order } from "../../../../orders/infra/typeorm/entities/Order";
 
 @Entity("plates")
 class Plate implements IPlate {

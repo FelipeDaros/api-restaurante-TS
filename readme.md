@@ -28,6 +28,8 @@
 
 - Listagem de todos os clientes cadastrados.
 
+- Deve ser possível deletar um cliente.
+
 - Deve ser possível cadastrar um prato com a conta de administador.
 
 - Deve ser possível adicionar foto do prato.
@@ -35,6 +37,8 @@
 - Deve ser possível listar todos os pratos
 
 - Deve ser possível lista o prato pelo nome.
+
+- Deve ser possível deletar um prato.
 
 - Listagem dos pedidos de todos o pedidos.
 
