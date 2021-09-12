@@ -20,8 +20,9 @@ export class CreateClient1631385919496 implements MigrationInterface {
                     type: "varchar"
                 },
                 {
-                    name: "photo_cleint",
-                    type: "varchar"
+                    name: "photo_client",
+                    type: "varchar",
+                    isNullable: true
                 },
                 {
                     name: "created_at",
