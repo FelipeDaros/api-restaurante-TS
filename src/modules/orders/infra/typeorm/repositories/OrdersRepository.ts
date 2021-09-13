@@ -19,6 +19,10 @@ class OrdersRepository implements IOrdersRepository {
       relations: ['client_id', 'plate_id']
     });
 
+    const clientsName = orders.map(order => order.client_id.name);
+    const clientsEmail = orders.map(order => order.client_id.email);
+    console.log(clientsEmail, clientsName);
+
     return orders;
   }
 
