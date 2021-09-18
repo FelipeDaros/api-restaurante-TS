@@ -8,11 +8,9 @@ import { Order } from "../entities/Order";
 
 class OrdersRepository implements IOrdersRepository {
   private ormRepository: Repository<Order>
-  private ormRepositoryClient: Repository<Client>
 
   constructor() {
     this.ormRepository = getRepository(Order)
-    this.ormRepositoryClient = getRepository(Client)
   }
   async findAllOrders(): Promise<IOrdersDTO[]> {
     const orders = await this.ormRepository.find({
@@ -24,14 +22,6 @@ class OrdersRepository implements IOrdersRepository {
     console.log(clientsEmail, clientsName);
 
     return orders;
-  }
-
-  async findByNameClient(client_id: string): Promise<IOrdersDTO | undefined> {
-    const order = this.ormRepository.findOne(client_id, {
-      relations: ['clients']
-    })
-
-    return order;
   }
 
   async create({ client_id, estimated_time, plate_id, price_total }: ICreateOrderDTO): Promise<IOrdersDTO> {
