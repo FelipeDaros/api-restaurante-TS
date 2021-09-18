@@ -7,6 +7,7 @@ interface IOrdersRepository {
   create({ client_id, estimated_time, plate_id, price_total }: ICreateOrderDTO): Promise<IOrdersDTO>;
   findById(id: string): Promise<IOrdersDTO | undefined>;
   findAllOrders(): Promise<IOrdersDTO[]>
+  findOrderByIdClient(client_id: string): Promise<IOrdersDTO | undefined>;
 }
 
 export { IOrdersRepository }

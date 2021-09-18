@@ -12,6 +12,19 @@ class OrdersRepository implements IOrdersRepository {
   constructor() {
     this.ormRepository = getRepository(Order)
   }
+
+  findOrderByIdClient(client_id: string): Promise<IOrdersDTO | undefined> {
+    const order = this.ormRepository.findOne({
+
+      where: {
+        client_id
+      },
+      relations: ["client_id"]
+    })
+
+    return order;
+  }
+
   async findAllOrders(): Promise<IOrdersDTO[]> {
     const orders = await this.ormRepository.find({
       relations: ['client_id', 'plate_id']
