@@ -42,7 +42,6 @@
 
 - Listagem dos pedidos de todos o pedidos.
 
-- Deve ser posssível listar o pedidos pelo nome do cliente.
 
 <br>
 <br>
